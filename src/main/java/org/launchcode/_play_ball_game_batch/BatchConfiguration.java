@@ -78,7 +78,7 @@ public class BatchConfiguration {
         return new JdbcBatchItemWriterBuilder<Game>()
                 .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
 
-                .sql("INSERT INTO game_detail (id, date, game_num, day_of_week, start_time, dh_used_flag, day_night, visiting_team, home_team, game_site, " +
+                .sql("INSERT INTO game_detail (id, date, game_num, day_of_week, start_time, dh_used_flag, day_night, visiting_team, home_team, ballpark_id, " +
                        "player_id_visit_starting_pitcher, player_position_visit_starting_pitcher, " +
                        "player_id_home_starting_pitcher, player_position_home_starting_pitcher, " +
                        "umpire_id_home_plate, umpire_id_first_base, umpire_id_second_base, umpire_id_third_base, umpire_id_left_field, umpire_id_right_field, " +
@@ -87,7 +87,7 @@ public class BatchConfiguration {
                        "number_of_innings, visit_final_score, home_final_score, visit_hits, home_hits, visit_errors, home_errors, visit_left_on_base, home_left_on_base, " +
                        "player_id_winning_pitcher, player_id_losing_pitcher, player_id_save_for, player_id_winning_rbi, player_id_visit_final_pitcher, player_id_home_final_pitcher, " +
                        "year, game_type) VALUES " +
-                        "(:id, :date, :gameNum, :dayOfWeek, :startTime, :dhUsedFlag, :dayNight, :visitingTeam, :homeTeam, :gameSite, " +
+                        "(:id, :date, :gameNum, :dayOfWeek, :startTime, :dhUsedFlag, :dayNight, :visitingTeam, :homeTeam, :ballparkId, " +
                         " :playerIdVisitStartingPitcher, :playerPositionVisitStartingPitcher, " +
                         " :playerIdHomeStartingPitcher, :playerPositionHomeStartingPitcher, " +
                         " :umpireIdHomePlate, :umpireIdFirstBase, :umpireIdSecondBase, :umpireIdThirdBase, :umpireIdLeftField, :umpireIdRightField, " +

@@ -12,7 +12,7 @@ public class Game {
     private final String dayNight;              // D/N
     private final String visitingTeam;
     private final String homeTeam;
-    private final String gameSite;                              // 9
+    private final String ballparkId;                              // 9
     private final String playerIdVisitStartingPitcher;          // 10
     private final int playerPositionVisitStartingPitcher;
     private final String playerIdHomeStartingPitcher;
@@ -161,7 +161,7 @@ public class Game {
         this.dayNight =  fieldSet.readString(6);     // day/night game
         this.visitingTeam = fieldSet.readString(7);     // visiting team
         this.homeTeam = fieldSet.readString(8);     // home team
-        this.gameSite = fieldSet.readString(9);     // game site
+        this.ballparkId = fieldSet.readString(9);     // game site
         this.playerIdVisitStartingPitcher = fieldSet.readString(10);    // starting home pitcher; could be a duplicate
         this.playerPositionVisitStartingPitcher = 1;                     // starting home pitcher position
         this.playerIdHomeStartingPitcher = fieldSet.readString(11);    // starting visit pitcher; could be a duplicate
@@ -296,8 +296,8 @@ public class Game {
         return homeTeam;
     }
 
-    public String getGameSite() {
-        return gameSite;
+    public String getBallparkId() {
+        return ballparkId;
     }
 
     public String getPlayerIdVisitStartingPitcher() {
